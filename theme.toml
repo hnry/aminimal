@@ -1,0 +1,14 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Aminmal"
+license = "	CC-BY-4.0"
+licenselink = "https://github.com/hnry/aminimal/blob/master/LICENSE.md"
+description = "a minimal theme with colors from base16 ocean  "
+homepage = "https://github.com/hnry/aminimal"
+tags = ["blog", "responsive", "code", "poopy"]
+features = ["blog", "themes"]
+min_version = 0.14
+
+[author]
+  name = "hnry"

@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+{{ range (where .Data.Pages ".Params.hidefromhome" "!=" "true") }}
+		<div class="entry">
+			<h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+			<div class="entry-body">
+				<div class="entry-meta">
+					{{ partial "date-meta.html" . }}
+				</div>
+	      <div>{{ .Summary }}</div>
+
+				<div class="entry-tags">
+					{{ partial "tags.html" . }}
+				</div>
+			</div>
+		</div> <!-- last -->
+{{ end }}
+
+{{ partial "footer.html" . }}

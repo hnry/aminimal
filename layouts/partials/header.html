@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+      {{ .Title }}
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Raleway|Lora' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
+</head>
+
+<body>
+
+<div id="container">
+    {{ partial "sidemenu.html" . }}
+    {{ partial "mobile-header.html" . }}
+    <div class="content">
