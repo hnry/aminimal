@@ -84,12 +84,11 @@ body {
 }
 
 .entry-title {
-  font-family: $font1;
-  padding: 0 0 5px 0;
+  font-family: $font2;
 }
 
 .entry-title a {
-  color: $color3;
+  color: $color2;
   padding-left: 2%;
   text-decoration: none;
 }
@@ -170,7 +169,7 @@ body {
   padding-right: 5%;
   color: $color2;
   font-family: $font2;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .single-meta {

@@ -53,11 +53,10 @@ body {
   line-height: 1.85em; }
 
 .entry-title {
-  font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 0 0 5px 0; }
+  font-family: "Raleway", sans-serif; }
 
 .entry-title a {
-  color: #65737e;
+  color: #4f5b66;
   padding-left: 2%;
   text-decoration: none; }
 
@@ -130,7 +129,7 @@ body {
   padding-right: 5%;
   color: #4f5b66;
   font-family: "Raleway", sans-serif;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 
 .single-meta {
   margin-left: 3%;
