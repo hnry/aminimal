@@ -8,14 +8,15 @@ function closeMenu() {
   side.style.width = "1%";
   sidebox.style.display = "none";
 }
-open.addEventListener("click", function() {
-    if (sidebox.style.display === "none" || sidebox.style.display === "") {
-      container.style.overflowY = "hidden";
-      sidebox.style.display = "block";
-      side.style.width = "65%";
-    } else {
-      closeMenu();
-    }
+open.addEventListener("click", function(e) {
+  e.preventDefault();
+  if (sidebox.style.display === "none" || sidebox.style.display === "") {
+    container.style.overflowY = "hidden";
+    sidebox.style.display = "block";
+    side.style.width = "40%";
+  } else {
+    closeMenu();
+  }
 });
 /*
 document.body.addEventListener("click", function() {
