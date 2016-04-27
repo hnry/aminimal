@@ -1,13 +1,13 @@
 {{ partial "header.html" . }}
-
+  <div class="single">
     <div class="entry-title single-title">
       {{ .Title }}
     </div>
 
     <div class="single-meta-wrap">
-    <div class="entry-meta single-meta">
-      {{ partial "date-meta.html" . }}
-    </div>
+      <div class="entry-meta single-meta">
+        {{ partial "date-meta.html" . }}
+      </div>
     </div>
 
     <div class="entry-body single-body">
@@ -17,5 +17,5 @@
     <div class="entry-tags single-tags">
       {{ partial "tags.html" . }}
     </div>
-
+  </div>
 {{ partial "footer.html" . }}

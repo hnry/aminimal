@@ -5,6 +5,29 @@ html, body {
   padding: 0;
   margin: 0; }
 
+a {
+  text-decoration: none;
+  color: #b48ead; }
+
+h1 {
+  font-size: 1.6em; }
+
+h2 {
+  font-size: 1.4em; }
+
+h3 {
+  font-size: 1.2em; }
+
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
+  color: #65737e;
+  margin-bottom: 10px; }
+
+hr {
+  opacity: 0.25;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
 body {
   font-family: "Lora", serif;
   font-size: 15px;
@@ -18,18 +41,20 @@ body {
   max-width: 1500px; }
 
 .content {
-  width: 74%;
+  width: 70%;
   float: right;
   min-height: 100%;
   background-color: #eff1f5;
-  padding-top: 25px; }
+  padding: 35px 2% 0 2%;
+  line-height: 1.4em; }
 
 .entry {
-  margin-bottom: 50px; }
+  margin-bottom: 70px;
+  line-height: 1.85em; }
 
 .entry-title {
   font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 5px 0 5px 0; }
+  padding: 0 0 5px 0; }
 
 .entry-title a {
   color: #65737e;
@@ -53,7 +78,7 @@ body {
   font-family: "Raleway", sans-serif; }
 
 .entry-tags {
-  margin-top: 15px;
+  margin-top: 5px;
   float: right;
   margin-right: 2%; }
 
@@ -96,22 +121,20 @@ body {
     color: #a7adba;
     text-decoration: none; }
 
+.single {
+  line-height: 1.85em; }
+
 .single-title {
-  font-size: 2em;
+  font-size: 2.3em;
   padding-left: 3%;
   padding-right: 5%;
-  background-color: #4f5b66;
-  color: #8fa1b3;
-  border-bottom: 5px solid #2b303b; }
+  color: #4f5b66;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 5px; }
 
 .single-meta {
-  margin-right: 5%;
-  margin-left: 65%;
-  width: 30%;
-  float: right;
-  text-align: center;
-  max-width: 150px;
-  background-color: #ebcb8b; }
+  margin-left: 3%;
+  margin-bottom: 30px; }
 
 .single-meta-wrap {
   margin-bottom: 20px; }
@@ -119,7 +142,7 @@ body {
 .single-body {
   padding-left: 5%;
   padding-right: 5%;
-  font-size: 1.07em; }
+  font-size: 1em; }
 
 .single-tags {
   padding-left: 5%;
@@ -158,7 +181,7 @@ body {
   margin-top: 12px; }
 
 code {
-  font: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.9em;
   color: #dfe1e8;
   background-color: #343d46;
