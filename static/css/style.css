@@ -21,7 +21,8 @@ body {
   width: 74%;
   float: right;
   min-height: 100%;
-  background-color: #eff1f5; }
+  background-color: #eff1f5;
+  padding-top: 25px; }
 
 .entry {
   margin-bottom: 50px; }
@@ -32,7 +33,8 @@ body {
 
 .entry-title a {
   color: #65737e;
-  padding-left: 2%; }
+  padding-left: 2%;
+  text-decoration: none; }
 
 .entry-title a:visited {
   color: #8fa1b3; }
@@ -66,16 +68,20 @@ body {
   color: #eff1f5;
   width: 26%;
   float: left;
-  position: fixed; }
+  position: fixed;
+  height: 100%; }
 
 .side-title {
   font-size: 2.5em;
   font-family: "Raleway", sans-serif;
   margin-left: 3%;
-  margin-bottom: 25px; }
+  margin-bottom: 35px; }
 
 .side-box {
-  margin-top: 50px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
 
 .side-menu {
   width: 80%;
@@ -173,9 +179,6 @@ code {
     float: none;
     width: 90%;
     margin: 0 auto; }
-
-  .entry-title a {
-    text-decoration: none; }
 
   .single-title {
     border-bottom: 0;

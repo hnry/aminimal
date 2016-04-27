@@ -59,6 +59,7 @@ body {
   float: right;
   min-height: 100%;
   background-color: $color7;
+  padding-top: 25px;
 }
 
 .entry {
@@ -73,6 +74,7 @@ body {
 .entry-title a {
   color: $color3;
   padding-left: 2%;
+  text-decoration: none;
 }
 
 .entry-title a:visited {
@@ -108,17 +110,21 @@ body {
   width: 26%;
   float: left;
   position: fixed;
+  height: 100%;
 }
 
 .side-title {
   font-size: 2.5em;
   font-family: $font2;
   margin-left: 3%;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .side-box {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .side-menu { // ul
@@ -216,7 +222,7 @@ code {
   margin-bottom: 2px;
 }
 
-@media (min-width: 751px) {
+@media (min-width: 751px) { // responsively reset menu from mobile
   .side {
     width: 26% !important;
   }
@@ -225,17 +231,13 @@ code {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 750px) { // tablets / phones
   .content {
     background-color: $color0;
     color: $color6;
     float: none;
     width: 90%;
     margin: 0 auto;
-  }
-
-  .entry-title a {
-    text-decoration: none;
   }
 
   .single-title {

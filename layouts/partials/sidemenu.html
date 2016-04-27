@@ -1,23 +1,20 @@
 <div id="side" class="side">
   <div class="side-box">
+    <div class="side-title">{{ .Site.Title }}</div>
+    <div id="side-box-content">
+      <ul class="side-menu">
+        {{ range .Site.Menus.main }}
+          <li class="side-item">
+            <a href="{{.URL}}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
 
-  <div class="side-title">{{ .Site.Title }}</div>
-
-  <div id="side-box-content">
-  <ul class="side-menu">
-    {{ range .Site.Menus.main }}
-      <li class="side-item">
-        <a href="{{.URL}}">{{ .Name }}</a>
-      </li>
-    {{ end }}
-  </ul>
-
-  <!-- <div class="side-social-links">
-    <ul>
-    </ul>
-  </div> -->
-
-  <div id="license" class="copyright"><a href="#">aminimal theme</a></div>
-  </div>
+    <!-- <div class="side-social-links">
+      <ul>
+      </ul>
+    </div> -->
+      <div id="license" class="copyright"><a href="#">aminimal theme</a></div>
+    </div>
   </div>
 </div>
