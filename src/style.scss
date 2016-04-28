@@ -52,6 +52,10 @@ a {
   @include transition(color .5s ease);
 }
 
+a:hover {
+  color: lighten($colorE, 10%);
+}
+
 h1 { font-size: 1.6em; }
 h2 { font-size: 1.4em; }
 h3 { font-size: 1.2em; }
@@ -107,10 +111,15 @@ body {
   color: $color2;
   padding-left: 2%;
   text-decoration: none;
+  @include transition(color .5s ease);
 }
 
 .entry-title a:visited {
   color: $colorD;
+}
+
+.entry-title a:hover {
+  color: $color3;
 }
 
 .entry-body {
@@ -159,6 +168,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  width: 100%;
 }
 
 .side-menu { // ul
@@ -212,14 +222,16 @@ body {
   font-size: 1.1em;
 }
 
+#license {
+  display: block;
+}
+
 .copyright {
   font-family: $font3;
-  text-align: center;
   font-size: 0.7em;
   position: fixed;
   bottom: 2px;
   left: 2px;
-//  z-index: 1;
 
   a {
     color: $color6;
@@ -247,8 +259,8 @@ code {
 }
 
 @media (min-width: 751px) { // responsively reset menu from mobile
-  #side-box-content {
-    //height: auto !important;
+  #side {
+    width: 22% !important;
   }
 }
 
@@ -269,9 +281,11 @@ code {
   }
 
   .content {
-    width: 100%;
+    width: 93%;
+    margin-left: 6%;
+
     padding: 40px 0 0 0;
-    float: none;
+    float: right;
   }
 
   .content-wrap {
@@ -286,16 +300,15 @@ code {
 
   .side {
     background-color: $color0;
-    min-width: 0px;
+    min-width: 22px;
     width: 1%;
     //@include box-shadow(5px 2px 11px -2px rgba(0,0,0,0.75));
     @include transition(width .5s ease);
     z-index: 1;
-
   }
 
   .side-box {
-    width: 90%;
+    width: 92%;
     overflow: hidden;
   }
 
@@ -304,14 +317,21 @@ code {
     flex-direction: column;
     justify-content: center;
 
-    width: 10%;
-    min-width: 25px;
+    width: 8%;
+    min-width: 22px;
 
-    font-size: 2.5em;
-    font-family: $font1;
+    font-size: 2em;
+    text-align: center;
+    font-family: $font2;
     font-weight: 300;
 
+    color: $color7;
     background-color: $color0;
+    @include transition(background-color .5s ease);
+  }
+
+  .side-arrow:hover {
+    background-color: $colorD;
   }
 
   .side-item {
@@ -323,4 +343,27 @@ code {
   #open-side {
     //display: inline;
   }
+
+  #license {
+    display: none;
+  }
 }
+
+@media (max-width: 400px) { // adjust side menu left margin numbers
+  .content {
+    width: 92%;
+    margin-left: 7%;
+  }
+
+  .side {
+    min-width: 20px;
+  }
+
+  .side-arrow {
+    min-width: 20px;
+  }
+}
+
+// side menu breaks down past this point
+// should just abandon the side menu at this point
+//@media (max-width: 285px) { }

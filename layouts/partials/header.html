@@ -6,6 +6,7 @@
   </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="{{ with .Keywords }}{{ delimit . "," }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Raleway|Lora' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
