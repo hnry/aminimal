@@ -33,7 +33,7 @@ $colorF: rgb(171, 121, 103);
 // or <code>
 // * exception being the self theme link
 // * links not part of layout
-$font1: 'Source Code Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font1: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // special text
 $font2: 'Raleway', sans-serif;
 // regular text
@@ -49,14 +49,16 @@ html, body, {
 a {
   text-decoration: none;
   color: $colorE;
+  @include transition(color .5s ease);
 }
 
 h1 { font-size: 1.6em; }
 h2 { font-size: 1.4em; }
 h3 { font-size: 1.2em; }
 h1, h2, h3 {
-  font-family: $font2;
+  font-family: $font1;
   color: $color3;
+  font-weight: 300;
   margin-bottom: 10px;
 }
 hr { opacity: 0.25; margin-top: 10px; margin-bottom: 10px; }
@@ -67,6 +69,11 @@ body {
   color: $color0;
   width: 100%;
   background-color: $color0;
+}
+
+
+.entry-title {
+  font-family: $font2;
 }
 
 #container {
@@ -91,13 +98,10 @@ body {
 }
 
 .entry {
-  margin-bottom: 70px;
+  padding-bottom: 70px;
   line-height: 1.85em;
 }
 
-.entry-title {
-  font-family: $font2;
-}
 
 .entry-title a {
   color: $color2;
@@ -133,6 +137,7 @@ body {
 }
 
 .side {
+  display: flex;
   background-color: $color0;
   color: $color7;
   width: 22%;
@@ -145,8 +150,8 @@ body {
 .side-title {
   font-size: 2.5em;
   font-family: $font2;
-  margin-left: 5%;
-  margin-bottom: 30px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .side-box {
@@ -157,30 +162,33 @@ body {
 }
 
 .side-menu { // ul
-  width: 80%;
-  margin-left: 20%;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
   list-style-type: none;
 }
 
 .side-menu li {
-  font: $font1;
+  font-family: $font2;
   margin-bottom: 20px;
+
   a {
     color: $color4;
     text-decoration: none;
+    display: block;
+  }
+
+  a:hover {
+    color: $color3;
   }
 }
 
-.single {
-  line-height: 1.85em;
-}
-
 .single-title {
-  font-size: 2.3em;
+  font-size: 1.8em;
   padding-left: 3%;
   padding-right: 5%;
   color: $color2;
-  font-family: $font2;
+  font-weight: 300;
   margin-bottom: 10px;
 }
 
@@ -205,7 +213,7 @@ body {
 }
 
 .copyright {
-  font: $font2;
+  font-family: $font3;
   text-align: center;
   font-size: 0.7em;
   position: fixed;
@@ -219,32 +227,18 @@ body {
   }
 }
 
-.mobile-header {
+.side-arrow {
   display: none;
-  width: 90%;
-}
-
-.mobile-header .side-title {
-  display: inline-block;
-  //width: 90%;
 }
 
 #open-side {
-  display: inline;
   cursor: pointer;
-  font-family: $font1;
-  border-bottom: 1px solid $color5;
-  float: right;
-  background-color: $color2;
-  color: $color6;
-  padding: 2px;
-  border-radius: 1px;
-  margin-top: 12px;
 }
 
 code {
   font-family: $font1;
-  font-size: 0.9em;
+  font-weight: 300;
+  font-size: 0.85em;
   color: $color6;
   background-color: $color1;
   padding: 2px;
@@ -253,88 +247,80 @@ code {
 }
 
 @media (min-width: 751px) { // responsively reset menu from mobile
-  .side {
-    //width: 26% !important;
-  }
   #side-box-content {
-    display: block !important;
+    //height: auto !important;
   }
 }
 
-@media (max-width: 750px) { // tablets / phones
-  .content {
-    //background-color: $color0;
-    //color: $color7;
-    float: none;
-    width: 99%;
-    //margin: 0 auto;
-  }
-
-  h1, h2, h3 {
-    //color: $colorD;
-  }
-
-  //hr { border-color: $colorD; }
+@media (max-width: 750px) { // tablets / phones (735px best size?)
+  body { background-color: $color7; }
 
   .single-title {
-    //color: $color7;
     border-bottom: 0;
+
+    margin-left: 0;
+    padding: 0;
+
     padding-bottom: 1px;
   }
 
-  .single-meta-wrap {
-    margin-bottom: 40px;
-  }
-
   .single-meta {
-    background-color: $color1;
-    color: $color4;
+    margin-left: 0;
   }
 
-  code {
-    background-color: $color3;
-  }
-
-  .mobile-header {
-    display: block;
-    color: $color6;
-    padding-top: 50px;
-  }
-
-  .mobile-header .side-title {
-    opacity: 0.9;
-    z-index: 10;
-    position: relative;
+  .content {
+    width: 100%;
+    padding: 40px 0 0 0;
+    float: none;
   }
 
   .content-wrap {
     min-width: 0; // reset min-width
-    width: 92%;   // reset the weird width used for full site
+    width: 90%;   // reset the weird width used for full site
     margin: 0 auto;
   }
 
+  .single-body {
+    padding: 0;
+  }
+
   .side {
-    min-width: 0; // reset min-width
-    background-color: $colorD;
-    height: 100%;
-    width: 0.8%;
-
-
+    background-color: $color0;
+    min-width: 0px;
+    width: 1%;
+    //@include box-shadow(5px 2px 11px -2px rgba(0,0,0,0.75));
+    @include transition(width .5s ease);
     z-index: 1;
 
-    //@include box-shadow(5px 2px 11px -2px rgba(0,0,0,0.75));
-    @include transition(width .3s ease);
-
-    li a {
-      color: $color1;
-    }
   }
 
-  .side-box .side-title {
-      opacity: 0;
+  .side-box {
+    width: 90%;
+    overflow: hidden;
   }
 
-  #side-box-content {
-    display: none;
+  .side-arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 10%;
+    min-width: 25px;
+
+    font-size: 2.5em;
+    font-family: $font1;
+    font-weight: 300;
+
+    background-color: $color0;
+  }
+
+  .side-item {
+    font-size: 1.1em;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $color3;
+  }
+
+  #open-side {
+    //display: inline;
   }
 }

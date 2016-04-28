@@ -1,7 +1,9 @@
 <div id="side" class="side">
-  <div class="side-box">
-    <div class="side-title">{{ .Site.Title }}</div>
-    <div id="side-box-content">
+  <div id="side-box-content" class="side-box">
+      <div class="side-title">
+        {{ .Site.Title }}
+      </div>
+
       <ul class="side-menu">
         {{ range .Site.Menus.main }}
           <li class="side-item">
@@ -15,7 +17,11 @@
       </ul>
     </div> -->
       <div id="license" class="copyright">
-        <a href="https://github.com/hnry/aminimal" target="_blank">aminimal theme</a></div>
+        <a href="https://github.com/hnry/aminimal" target="_blank">aminimal theme</a>
+      </div>
     </div>
+
+  <div class="side-arrow">
+    <div id="open-side">></div>
   </div>
 </div>

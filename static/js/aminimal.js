@@ -4,22 +4,13 @@ var open = document.getElementById("open-side");
 var container = document.getElementById("container");
 
 function closeMenu() {
-  container.style.overflowY = "initial";
-  side.style.width = "1%";
-  sidebox.style.display = "none";
+  side.style.width = "0%";
 }
 open.addEventListener("click", function(e) {
   e.preventDefault();
-  if (sidebox.style.display === "none" || sidebox.style.display === "") {
-    container.style.overflowY = "hidden";
-    sidebox.style.display = "block";
-    side.style.width = "40%";
+  if (side.style.width === "0%" || side.style.width === "") {
+    side.style.width = "60%";
   } else {
     closeMenu();
   }
 });
-/*
-document.body.addEventListener("click", function() {
-  closeMenu();
-});
-*/
